@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
           backgroundColor: Color(0xff1e2025),
           body: Column(
@@ -63,8 +63,10 @@ class MyApp extends StatelessWidget {
                   children: <Widget>[
                   Text('Take away from',
                   textAlign: TextAlign.start,
-                  style: TextStyle(color: Colors.blueGrey[200],
-                  fontSize: 15.0)),
+                  style: TextStyle(color: Color(0xff5b5e63),
+                  fontSize: 15.0,
+                  fontWeight: FontWeight.w400),
+                  ),
                   SizedBox(
                   height: 5.0,
                 ),
@@ -101,7 +103,7 @@ class MyApp extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Text('New Burgers Pizza Sushi Drinks Momos Chicken',
               style: TextStyle(
-                color: Colors.blueGrey,
+                color: Color(0xff414449),
                 fontWeight: FontWeight.bold,
                 fontSize: 20.0,
                 letterSpacing: 3,

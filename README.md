@@ -1,16 +1,7 @@
-# restaurant
+# Restaurant-UI
 
-A new Flutter project.
+Tried to design a restaurant/food ordering app UI using Flutter to enhance my frontend skills.
 
-## Getting Started
+## What I built 
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+![Simulator Screen Shot - iPhone 12 Pro Max - 2022-01-16 at 17 41 10](https://user-images.githubusercontent.com/61904667/149659777-b8dfd571-d3ae-4be2-bccd-cf1605e1c372.png)
