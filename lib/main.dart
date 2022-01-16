@@ -23,23 +23,39 @@ class MyApp extends StatelessWidget {
           
           children: <Widget>[
             Container(
-              padding: EdgeInsets.only(top: 50.0, left: 20.0),
+              margin: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
               child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
-                Icon(Icons.account_circle_outlined, size: 50.0,
+                RawMaterialButton(
+  onPressed: () {},
+  constraints: BoxConstraints(),
+  elevation: 2.0,
+  fillColor: Color(0xff383c45),
+                child:Icon(Icons.person_outlined, size: 25.0,
                 color: Color(0xffe7e8e9)),
-                SizedBox(
-                  width: 270.0,
-                ),
-                Icon(Icons.shopping_basket_outlined, size: 50.0, color: Color(0xffe7e8e9)),
+                padding: EdgeInsets.all(10.0),
+  shape: CircleBorder(),
+),
+                RawMaterialButton(
+  onPressed: () {},
+  constraints: BoxConstraints(),
+  elevation: 2.0,
+  fillColor: Color(0xff383c45),
+                child:Icon(Icons.shopping_bag_outlined, size: 25.0, 
+                color: Color(0xffe7e8e9)),
+                padding: EdgeInsets.all(10.0),
+  shape: CircleBorder(),
+),
+                
               ],
             )
             ),
             Container(
-              padding: EdgeInsets.only(top: 50.0, left: 20.0),
+              margin: EdgeInsets.only(top: 50.0, left: 20.0, right: 20.0),
               child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
@@ -64,7 +80,16 @@ class MyApp extends StatelessWidget {
                 SizedBox(
                   width: 100.0,
                 ),
-                Icon(Icons.edit_outlined, size: 40.0, color: Color(0xffe7e8e9)),
+                RawMaterialButton(
+  onPressed: () {},
+  constraints: BoxConstraints(),
+  elevation: 2.0,
+  fillColor: Color(0xff383c45),
+                child:Icon(Icons.edit_outlined, size: 25.0, 
+                color: Color(0xffe7e8e9)),
+                padding: EdgeInsets.all(10.0),
+  shape: CircleBorder(),
+),
               ],
             )
             ),
@@ -85,7 +110,7 @@ class MyApp extends StatelessWidget {
               )
             ),
 
-           ItemCard(AssetImage('images/i1.jpeg'), 'Chicken burger', '320g', '\$5.42'),
+           ItemCard(AssetImage('images/i1.jpeg'), 'Chicken Burger', '320g', '\$5.42'),
            ItemCard(AssetImage('images/i4.jpeg'), 'Barbeque Pizza', '660g', '\$6.29'),
            ItemCard(AssetImage('images/i3.jpeg'), 'Chocolate Pastry', '50g', '\$3.45'),
            ItemCard(AssetImage('images/i2.jpeg'), 'Purple Mocktail', '200g', '\$2.71'),
@@ -140,8 +165,9 @@ class ItemCard extends StatelessWidget {
         <Widget>[
           Text(name, 
           textAlign: TextAlign.left,
-          style: TextStyle(fontSize: 20.0,
-          color: Colors.white),
+          style: TextStyle(fontSize: 18.0,
+          color: Colors.white,
+          fontWeight: FontWeight.w600),
           ),
           Text(weight,
             textAlign: TextAlign.start,
@@ -150,7 +176,7 @@ class ItemCard extends StatelessWidget {
           
           ),
           SizedBox(
-            height: 10.0,
+            height: 15.0,
           ),
           Container(
             decoration: BoxDecoration(
