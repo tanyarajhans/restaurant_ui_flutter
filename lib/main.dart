@@ -27,11 +27,12 @@ class MyApp extends StatelessWidget {
               child: Row(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
-                Icon(Icons.account_circle_outlined, size: 50.0),
+                Icon(Icons.account_circle_outlined, size: 50.0,
+                color: Color(0xffe7e8e9)),
                 SizedBox(
                   width: 270.0,
                 ),
-                Icon(Icons.shopping_basket_outlined, size: 50.0),
+                Icon(Icons.shopping_basket_outlined, size: 50.0, color: Color(0xffe7e8e9)),
               ],
             )
             ),
@@ -63,7 +64,7 @@ class MyApp extends StatelessWidget {
                 SizedBox(
                   width: 100.0,
                 ),
-                Icon(Icons.edit_outlined, size: 40.0),
+                Icon(Icons.edit_outlined, size: 40.0, color: Color(0xffe7e8e9)),
               ],
             )
             ),
@@ -84,11 +85,10 @@ class MyApp extends StatelessWidget {
               )
             ),
 
-           ItemCard(),
-           ItemCard(),
-           ItemCard(),
-           ItemCard(),
-
+           ItemCard(AssetImage('images/i1.jpeg'), 'Chicken burger', '320g', '\$5.42'),
+           ItemCard(AssetImage('images/i4.jpeg'), 'Barbeque Pizza', '660g', '\$6.29'),
+           ItemCard(AssetImage('images/i3.jpeg'), 'Chocolate Pastry', '50g', '\$3.45'),
+           ItemCard(AssetImage('images/i2.jpeg'), 'Purple Mocktail', '200g', '\$2.71'),
           ],
         )
         )
@@ -97,9 +97,13 @@ class MyApp extends StatelessWidget {
 }
 
 class ItemCard extends StatelessWidget {
-  const ItemCard({
-    Key? key,
-  }) : super(key: key);
+  
+  ImageProvider<Object> img;
+  String name;
+  String price;
+  String weight;
+
+  ItemCard(this.img, this.name, this.weight, this.price);
 
   @override
   Widget build(BuildContext context) {
@@ -118,9 +122,9 @@ class ItemCard extends StatelessWidget {
         children: <Widget>[
        
         ClipRRect(
-         borderRadius: BorderRadius.circular(100.0),
+         borderRadius: BorderRadius.circular(80.0),
          
-         child: Image(image: AssetImage('images/me.jpeg'),
+         child: Image(image: img,
            height: 100.0,
            width: 100.0,
          ),
@@ -134,12 +138,12 @@ class ItemCard extends StatelessWidget {
            crossAxisAlignment: CrossAxisAlignment.start,
            children: 
         <Widget>[
-          Text('Chicken burger', 
+          Text(name, 
           textAlign: TextAlign.left,
           style: TextStyle(fontSize: 20.0,
           color: Colors.white),
           ),
-          Text('320 g',
+          Text(weight,
             textAlign: TextAlign.start,
           style: TextStyle(fontSize: 15.0,
           color: Color(0xffcecfd2)),
@@ -156,7 +160,7 @@ class ItemCard extends StatelessWidget {
             height: 30.0,
             width: 80.0,
             child: Align(alignment: Alignment.center,
-            child: Text("\$5.32", 
+            child: Text(price, 
             style: TextStyle(fontSize: 15.0,
           color: Colors.white, fontWeight: FontWeight.bold),
           )
