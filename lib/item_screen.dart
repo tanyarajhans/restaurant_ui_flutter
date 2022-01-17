@@ -49,28 +49,45 @@ class ItemScreen extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                        children: <Widget>[
-                         Text('Double Cheese Burger',
-                         style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold)),
-                         Text('Marble beef, cheddar cheese, jalapeno pepper, pickled cucumber, lettuce, redonion, barbecue sauce', 
+                         Text('Big double cheeseburger',
                          textAlign: TextAlign.center,
-                         style: TextStyle(color: Colors.white)),
+                         style: TextStyle(color: Colors.white, fontSize: 32.0, fontWeight: FontWeight.bold)),
+                         SizedBox(
+                           height: 30.0
+                         ),
+                         Text('Marble beef, cheddar cheese, jalapeno pepper, pickled cucumber, lettuce, red onion, BBQ sauce', 
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Color(0xff454953),  fontSize: 18.0, fontWeight: FontWeight.w600)),
+                         SizedBox(
+                           height: 30.0
+                         ),
                          Row(
                            mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                            children: <Widget>[
                            Container(
                              child: Row(children: <Widget>[
-                             Icon(Icons.price_change, color: Colors.white),
+                             Icon(Icons.tag_rounded, color: Colors.white),
+                             SizedBox(
+                           width: 5.0
+                         ),
                              Text('\$5.42',
-                         style: TextStyle(color: Colors.white))
+                         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+                         )
                            ]),
                            ),
+                           SizedBox(
+                           width: 30.0
+                         ),
                            Container(
                              
                              child: Row(children: <Widget>[
-                             Icon(Icons.monitor_weight, color: Colors.white),
-                             Text('\$5.42',
-                         style: TextStyle(color: Colors.white))
+                             Icon(Icons.add_box_outlined, color: Colors.white),
+                             SizedBox(
+                           width: 5.0
+                         ),
+                             Text('320 g',
+                         style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold))
                            ]
                            ),
                            ),
