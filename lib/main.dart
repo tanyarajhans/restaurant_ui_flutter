@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'item_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,9 +14,12 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: Scaffold(
+    return MaterialApp(debugShowCheckedModeBanner: false,
+      routes: {
+        '/item_screen': (context) => const ItemScreen(),
+      }, home: Builder(
+        builder: (context) =>
+       Scaffold(
           backgroundColor: Color(0xff1e2025),
           body: Column(
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -83,7 +87,9 @@ class MyApp extends StatelessWidget {
                   width: 100.0,
                 ),
                 RawMaterialButton(
-  onPressed: () {},
+  onPressed: () {
+    Navigator.pushNamed(context, '/item_screen');
+  },
   constraints: BoxConstraints(),
   elevation: 2.0,
   fillColor: Color(0xff383c45),
@@ -119,6 +125,7 @@ class MyApp extends StatelessWidget {
           ],
         )
         )
+      )
     );
   }
 }
