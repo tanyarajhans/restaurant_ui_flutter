@@ -34,7 +34,7 @@ class ItemScreen extends StatelessWidget {
 
                       child: 
                     Container(
-                      margin: EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
+                      margin: EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0, bottom: 60.0),
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(15.0),
                         
@@ -43,8 +43,47 @@ class ItemScreen extends StatelessWidget {
                        ),
                       ),
                      )
-                    )
+                    ),
+                    Column(
+                        
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                       children: <Widget>[
+                         Text('Double Cheese Burger',
+                         style: TextStyle(color: Colors.white, fontSize: 20.0, fontWeight: FontWeight.bold)),
+                         Text('Marble beef, cheddar cheese, jalapeno pepper, pickled cucumber, lettuce, redonion, barbecue sauce', 
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Colors.white)),
+                         Row(
+                           mainAxisAlignment: MainAxisAlignment.center,
+                        crossAxisAlignment: CrossAxisAlignment.center,
+                           children: <Widget>[
+                           Container(
+                             child: Row(children: <Widget>[
+                             Icon(Icons.price_change, color: Colors.white),
+                             Text('\$5.42',
+                         style: TextStyle(color: Colors.white))
+                           ]),
+                           ),
+                           Container(
+                             
+                             child: Row(children: <Widget>[
+                             Icon(Icons.monitor_weight, color: Colors.white),
+                             Text('\$5.42',
+                         style: TextStyle(color: Colors.white))
+                           ]
+                           ),
+                           ),
+                           
+                         ],
+                         ),
+                         
+                         TextButton(onPressed: (){}, child: Text('Taste it for \$5.42'))
 
+                      ],
+                      ),
+                    
+                    
                   ],
                 )
               )
