@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'order_screen.dart';
 import 'dart:math';
 
 class ItemScreen extends StatelessWidget {
@@ -6,7 +7,6 @@ class ItemScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var math;
     return Scaffold(
       backgroundColor: Color(0xff1e2025),
       body: Container(
@@ -127,7 +127,9 @@ class ItemScreen extends StatelessWidget {
                            width: 380, // <-- Your width
                           height: 60,// <-- match-parent
                         child: ElevatedButton(
-                          onPressed: (){}, 
+                          onPressed: (){
+                            Navigator.pushNamed(context, '/order_screen');
+                          }, 
                          child: Text('Taste it for \$5.42',
                          style: TextStyle(
                            fontSize: 20.0,

@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'order_screen.dart';
 import 'item_screen.dart';
 
 void main() {
@@ -17,6 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(debugShowCheckedModeBanner: false,
       routes: {
         '/item_screen': (context) => const ItemScreen(),
+        '/order_screen': (context) => OrderScreen(),
       }, home: Builder(
         builder: (context) =>
        Scaffold(
