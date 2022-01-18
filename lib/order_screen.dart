@@ -1,6 +1,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:step_progress_indicator/step_progress_indicator.dart';
 
 class OrderScreen extends StatelessWidget {
 
@@ -12,7 +13,7 @@ class OrderScreen extends StatelessWidget {
         margin: EdgeInsets.only(top: 60.0, left: 20.0, right: 20.0),
               child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
-                crossAxisAlignment: CrossAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topLeft,
@@ -28,18 +29,33 @@ class OrderScreen extends StatelessWidget {
                         shape: CircleBorder(),
                       ),
                     ),
-                    Text('Big double cheeseburger',
-                         textAlign: TextAlign.center,
-                         style: TextStyle(color: Colors.white, fontSize: 32.0, fontWeight: FontWeight.bold)),
-                         SizedBox(
+                    SizedBox(
                            height: 20.0
                          ),
-                         Text('Marble beef, cheddar cheese, jalapeno pepper, pickled cucumber, lettuce, red onion, BBQ sauce', 
+                    Text('Order number', 
                          textAlign: TextAlign.center,
                          style: TextStyle(color: Color(0xff454953),  fontSize: 18.0, fontWeight: FontWeight.w600)),
                          SizedBox(
+                           height: 10.0
+                         ),
+                    Text('456',
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Colors.white, fontSize: 50.0, fontWeight: FontWeight.bold)),
+                         SizedBox(
                            height: 20.0
                          ),
+                         Text('will be ready in 5 minutes', 
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Color(0xff454953),  fontSize: 23.0, fontWeight: FontWeight.w600)),
+                         SizedBox(
+                           height: 40.0
+                         ),
+                         StepProgressIndicator(
+    totalSteps: 4,
+    currentStep: 3,
+    selectedColor: Colors.red,
+    unselectedColor: Colors.yellow,
+)
                 ]
               )
       )
