@@ -45,11 +45,8 @@ class OrderScreen extends StatelessWidget {
                     ]
                     )
                     ),
-                         SizedBox(
-                           height: 10.0
-                         ),
                     SizedBox(
-                           height: 20.0
+                           height: 40.0
                          ),
                     Text('Order number', 
                          textAlign: TextAlign.center,
@@ -59,7 +56,7 @@ class OrderScreen extends StatelessWidget {
                          ),
                     Text('456',
                          textAlign: TextAlign.center,
-                         style: TextStyle(color: Colors.white, fontSize: 50.0, fontWeight: FontWeight.bold)),
+                         style: TextStyle(color: Colors.white, fontSize: 70.0, fontWeight: FontWeight.bold)),
                          SizedBox(
                            height: 30.0
                          ),
@@ -83,7 +80,7 @@ class OrderScreen extends StatelessWidget {
                          style: TextStyle(color: Colors.white,  fontSize: 24.0, fontWeight: FontWeight.w600)
                          ),
                          SizedBox(
-                           height: 50.0
+                           height: 80.0
                          ),
                          Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -102,12 +99,57 @@ class OrderScreen extends StatelessWidget {
                 padding: EdgeInsets.all(10.0),
   shape: CircleBorder(),
 ),
-                
-              ],
-            )
+]
+                         ),
+
+                Expanded(child:
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    OrderItem(AssetImage('images/i1.jpeg'), 'Chicken Burger', '4', '\$5.42'),
+                    OrderItem(AssetImage('images/i2.jpeg'), 'Barbeque Pizza', '2', '\$6.29'),
+                    OrderItem(AssetImage('images/i3.jpeg'), 'Chocolate Pastry', '1', '\$3.45'),
+                    OrderItem(AssetImage('images/i4.jpeg'), 'Purple Mocktail', '1', '\$2.71'),
+                  ]
+                )
+                )
+              
                 ]
               )
       )
+    );
+  }
+}
+
+class OrderItem extends StatelessWidget {
+  ImageProvider<Object> img;
+  String name;
+  String price;
+  String quantity;
+
+  OrderItem(this.img, this.name, this.quantity, this.price);
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: <Widget>[
+      ClipRRect(
+         borderRadius: BorderRadius.circular(80.0),
+         
+         child: Image(image: img,
+           height: 50.0,
+           width: 50.0,
+         ),
+        ),
+      SizedBox(
+         width: 10.0,
+         ),
+      Text(name,
+      style: TextStyle(color: Colors.white,  fontSize: 15.0, fontWeight: FontWeight.w600)),
+      Spacer(),
+      Text('$quantity*$price',
+      style: TextStyle(color: Colors.white,  fontSize: 15.0, fontWeight: FontWeight.w600))
+      ],
     );
   }
 }
