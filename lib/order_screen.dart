@@ -20,7 +20,9 @@ class OrderScreen extends StatelessWidget {
                     child:Row(crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       RawMaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       constraints: BoxConstraints(),
                       elevation: 2.0,
                       fillColor: Color(0xff383c45),

@@ -18,7 +18,9 @@ class ItemScreen extends StatelessWidget {
                   Align(
                     alignment: Alignment.topRight,
                     child:RawMaterialButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
                       constraints: BoxConstraints(),
                       elevation: 2.0,
                       fillColor: Color(0xff383c45),
