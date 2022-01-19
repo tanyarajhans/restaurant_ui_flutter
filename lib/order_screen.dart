@@ -17,7 +17,9 @@ class OrderScreen extends StatelessWidget {
                 children: <Widget>[
                   Align(
                     alignment: Alignment.topLeft,
-                    child:RawMaterialButton(
+                    child:Row(crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      RawMaterialButton(
                       onPressed: () {},
                       constraints: BoxConstraints(),
                       elevation: 2.0,
@@ -28,7 +30,24 @@ class OrderScreen extends StatelessWidget {
                         padding: EdgeInsets.all(10.0),
                         shape: CircleBorder(),
                       ),
+                      SizedBox(
+                           width: 100.0
+                         ),
+                    Align(
+                      
+                    alignment: Alignment.center,
+                    child:
+                    Text('Order info', 
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Colors.white,  fontSize: 18.0, fontWeight: FontWeight.w600)
+                         ),
                     ),
+                    ]
+                    )
+                    ),
+                         SizedBox(
+                           height: 10.0
+                         ),
                     SizedBox(
                            height: 20.0
                          ),
@@ -42,20 +61,27 @@ class OrderScreen extends StatelessWidget {
                          textAlign: TextAlign.center,
                          style: TextStyle(color: Colors.white, fontSize: 50.0, fontWeight: FontWeight.bold)),
                          SizedBox(
-                           height: 20.0
+                           height: 30.0
                          ),
                          Text('will be ready in 5 minutes', 
                          textAlign: TextAlign.center,
                          style: TextStyle(color: Color(0xff454953),  fontSize: 23.0, fontWeight: FontWeight.w600)),
                          SizedBox(
-                           height: 40.0
+                           height: 60.0
                          ),
                          StepProgressIndicator(
-    totalSteps: 4,
-    currentStep: 3,
-    selectedColor: Colors.red,
-    unselectedColor: Colors.yellow,
-)
+                          totalSteps: 4,
+                          currentStep: 3,
+                          selectedColor: Color(0xff7b3fff),
+                          unselectedColor: Color(0xff4e525c),
+                        ),
+                        SizedBox(
+                           height: 30.0
+                         ),
+                        Text('Preparing', 
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Colors.white,  fontSize: 24.0, fontWeight: FontWeight.w600)
+                         ),
                 ]
               )
       )
