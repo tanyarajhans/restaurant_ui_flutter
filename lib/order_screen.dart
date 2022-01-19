@@ -82,6 +82,29 @@ class OrderScreen extends StatelessWidget {
                          textAlign: TextAlign.center,
                          style: TextStyle(color: Colors.white,  fontSize: 24.0, fontWeight: FontWeight.w600)
                          ),
+                         SizedBox(
+                           height: 50.0
+                         ),
+                         Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text('Order list', 
+                         textAlign: TextAlign.center,
+                         style: TextStyle(color: Colors.white,  fontSize: 18.0, fontWeight: FontWeight.w600)
+                         ),
+                RawMaterialButton(
+  onPressed: () {},
+  constraints: BoxConstraints(),
+  elevation: 2.0,
+  fillColor: Color(0xff383c45),
+                child:Icon(Icons.money_off_csred_rounded, size: 25.0, 
+                color: Color(0xffe7e8e9)),
+                padding: EdgeInsets.all(10.0),
+  shape: CircleBorder(),
+),
+                
+              ],
+            )
                 ]
               )
       )
